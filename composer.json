@@ -1,5 +1,5 @@
 {
-    "name": "manamine/php-eos-rpc-sdk",
+    "name": "vladyslavstartsev/php-eos-rpc-sdk",
     "description": "PHP SDK for the EOS RPC API",
     "type": "library",
     "keywords": ["php","eos","rpc","sdk","api","crypto","blockchain"],
