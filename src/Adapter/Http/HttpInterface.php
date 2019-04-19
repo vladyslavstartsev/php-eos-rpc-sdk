@@ -21,5 +21,5 @@ interface HttpInterface
      *
      * @return string The request response
      */
-    public function post(string $url, $params): string;
+    public function post(string $url, array $params): string;
 }

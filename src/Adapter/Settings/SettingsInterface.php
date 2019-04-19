@@ -10,4 +10,11 @@ interface SettingsInterface
      * @return string
      */
     public function rpcNode(): string;
+
+    /**
+     * Fetch the RPC of keosd
+     *
+     * @return string
+     */
+    public function rpcKeosd(): string;
 }

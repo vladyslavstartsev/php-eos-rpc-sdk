@@ -53,7 +53,7 @@ class CurlAdapter implements HttpInterface
      * mixed $params string or array
      *
      * @param string $url    The request URL
-     * @param mixed  $params Additional POST params
+     * @param string|array $params Additional POST params
      *
      * @throws \Exception For failed requests
      *

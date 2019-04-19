@@ -64,7 +64,7 @@ class WalletController
     {
         return $this->client->post(
             $this->buildUrl('/wallet/create'),
-            "\"$name\""
+            $name
         );
     }
 
@@ -79,7 +79,7 @@ class WalletController
     {
         return $this->client->post(
             $this->buildUrl('/wallet/open'),
-            "\"$name\""
+            $name
         );
     }
 
@@ -88,11 +88,11 @@ class WalletController
      *
      * @return string
      */
-    public function lock(string $name = 'defaut'): string
+    public function lock(string $name = 'default'): string
     {
         return $this->client->post(
             $this->buildUrl('/wallet/lock'),
-            "\"$name\""
+            $name
         );
     }
 

@@ -4,6 +4,7 @@ namespace BlockMatrix\EosRpc\Adapter\Http;
 
 use BlockMatrix\EosRpc\Exception\HttpException;
 use GuzzleHttp\Client as Guzzle;
+use GuzzleHttp\RequestOptions;
 
 /**
  * Class GuzzleAdapter
@@ -51,16 +52,16 @@ class GuzzleAdapter implements HttpInterface
      * Perform POST request
      *
      * @param string $url    The request URL
-     * @param array  $params Additional POST params
+     * @param string|array $params Additional POST params
      *
      * @throws \Exception For failed requests
      *
      * @return string The POST response
      */
-    public function post(string $url, array $params): string
+    public function post(string $url, $params): string
     {
         try {
-            $response = $this->client->post($url, ['headers' => ['Accept' => 'application/json'], 'form_params' => $params]);
+            $response = $this->client->post($url, ['headers' => ['Accept' => 'application/json'], RequestOptions::JSON => $params]);
         } catch (\Throwable $t) {
             throw new HttpException("POST Request failed: {$t->getMessage()}");
         }
